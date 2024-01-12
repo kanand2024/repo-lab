@@ -1,0 +1,14 @@
+// Declarative Pipeline
+pipeline {
+  agent any
+ triggers {
+ cron('0 0 * * *')
+}
+  stages {
+   stage('Example') {
+  steps {
+     echo 'Hello World'
+   }
+  }
+ }
+}
